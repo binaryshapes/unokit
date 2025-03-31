@@ -1,0 +1,18 @@
+{
+    "version": "0.2",
+    "ignorePaths": [
+        "package.json",
+        "pnpm-workspace.yaml",
+        "node_modules",
+        "dist",
+        "coverage",
+    ],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [],
+    "ignoreWords": [
+        "unokit",
+        "Moonrepo"
+    ],
+    "import": []
+}
