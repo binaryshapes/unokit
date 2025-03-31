@@ -1,8 +1,6 @@
 {
     "version": "0.2",
     "ignorePaths": [
-        "package.json",
-        "pnpm-workspace.yaml",
         "node_modules",
         "dist",
         "coverage",
@@ -12,7 +10,8 @@
     "words": [],
     "ignoreWords": [
         "unokit",
-        "Moonrepo"
+        "Moonrepo",
+        "prototools"
     ],
     "import": []
 }
