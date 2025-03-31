@@ -1,7 +1,7 @@
 {
   "name": "unokit",
   "version": "1.0.0",
-  "description": "Tools presets and templates for source code management in one place",
+  "description": "Boilerplate presets and templates to simplify project setup and source code management.",
   "license": "MIT",
   "author": "Carlos Cosming <carlos@binaryshapes.com>",
   "keywords": [],
