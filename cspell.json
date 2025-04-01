@@ -11,7 +11,8 @@
     "ignoreWords": [
         "unokit",
         "Moonrepo",
-        "prototools"
+        "prototools",
+        "commitlint",
     ],
     "import": []
 }
