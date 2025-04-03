@@ -18,9 +18,15 @@ Thumbs.db
 .moon/cache
 .moon/docker
 
-# Node Modules.
-node_modules
-
 # moon
 .moon/cache
 .moon/docker
+
+# Node Modules.
+node_modules
+
+# Coverage.
+coverage
+
+# Builds.
+dist

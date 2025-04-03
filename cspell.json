@@ -10,7 +10,8 @@
     "prototools",
     "commitlint",
     "tiged",
-    "swcrc"
+    "swcrc",
+    "trivago"
   ],
   "import": []
 }
