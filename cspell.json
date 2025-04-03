@@ -1,18 +1,16 @@
 {
-    "version": "0.2",
-    "ignorePaths": [
-        "node_modules",
-        "dist",
-        "coverage",
-    ],
-    "dictionaryDefinitions": [],
-    "dictionaries": [],
-    "words": [],
-    "ignoreWords": [
-        "unokit",
-        "Moonrepo",
-        "prototools",
-        "commitlint",
-    ],
-    "import": []
+  "version": "0.2",
+  "ignorePaths": ["node_modules", "dist", "coverage"],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [],
+  "ignoreWords": [
+    "unokit",
+    "Moonrepo",
+    "prototools",
+    "commitlint",
+    "tiged",
+    "swcrc"
+  ],
+  "import": []
 }
