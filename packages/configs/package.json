@@ -1,0 +1,57 @@
+{
+  "name": "@unokit/configs",
+  "version": "1.0.0",
+  "description": "Unokit tools configuration for internal use",
+  "author": "Carlos Cosming <carlos@binaryshapes.dev>",
+  "license": "UNLICENSED",
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./eslint": {
+      "import": "./dist/eslint.mjs",
+      "require": "./dist/eslint.cjs"
+    },
+    "./tsup": {
+      "import": "./dist/tsup.mjs",
+      "require": "./dist/tsup.cjs"
+    },
+    "./tsconfig.json": "./dist/tsconfig.json"
+  },
+  "typesVersions": {
+    "*": {
+      "eslint": [
+        "./dist/eslint.d.ts"
+      ],
+      "tsup": [
+        "./dist/tsup.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "copyfiles": "copyfiles -f src/tsconfig.json dist",
+    "clean": "rimraf dist",
+    "build": "pnpm clean && tsup"
+  },
+  "devDependencies": {
+    "@nx/eslint-plugin": "^20.7.1",
+    "copyfiles": "^2.4.1",
+    "eslint": "^9.23.0",
+    "jiti": "^2.4.2",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  },
+  "peerDependencies": {
+    "@nx/eslint-plugin": "^20.7.1",
+    "eslint": "^9.23.0",
+    "jiti": "^2.4.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  },
+  "packageManager": "pnpm@10.7.0"
+}

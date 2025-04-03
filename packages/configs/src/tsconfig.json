@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "rootDir": "${configDir}",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": ["ESNext"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": "${configDir}",
+    "outDir": "${configDir}/dist",
+    "composite": false,
+    "declaration": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+}
