@@ -9,7 +9,6 @@
     "lib": ["ESNext"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": "${configDir}",
     "outDir": "${configDir}/dist",
     "composite": false,
     "declaration": true,

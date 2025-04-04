@@ -1,6 +1,6 @@
-import { defineConfig, type Options } from 'tsup';
+import { type Options } from 'tsup';
 
-export const base: Options = {
+export const baseConfig: Options = {
   splitting: false,
   sourcemap: false,
   clean: true,
@@ -17,16 +17,4 @@ export const base: Options = {
   minifyWhitespace: true,
 };
 
-/**
- * Tsup configuration factory.
- *
- * @param options - Tsup options that will override base options.
- * @returns Tsup configuration.
- */
-const tsupConfig = (options: Pick<Options, 'entry' | 'external' | 'onSuccess'>) =>
-  ({
-    ...base,
-    ...options,
-  }) as Options;
-
-export default tsupConfig;
+export default baseConfig;
