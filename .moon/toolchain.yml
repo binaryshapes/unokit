@@ -1,6 +1,6 @@
-$schema: 'https://moonrepo.dev/schemas/toolchain.json'
-
-# All node and tools versions are managed by prototools. See .prototools file.
 node:
+  # All node and tools versions are managed by prototools.
   packageManager: 'pnpm'
   syncPackageManagerField: true
+  syncProjectWorkspaceDependencies: true
+  inferTasksFromScripts: false
