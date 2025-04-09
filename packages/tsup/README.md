@@ -1,15 +1,9 @@
 <h1 align="center">UnoKit Tsup</h1>
 
 <div align="center">
-  <a href="https://github.com/binaryshapes/unokit" target="_blank">
-    <img src="https://shields.io/badge/version-1.0.0-brightgreen.svg" alt="Version" />
-  </a>
-  <a href="https://www.typescriptlang.org/" target="_blank">
-    <img src="https://img.shields.io/badge/TypeScript-^5.8.2-blue.svg" alt="TypeScript version" />
-  </a>
-  <a href="https://github.com/egoist/tsup">
-    <img src="https://img.shields.io/badge/Tsup-^8.4.0-yellow.svg" alt="Tsup version" />
-  </a>
+  <a href="https://github.com/binaryshapes/unokit"><img src="https://shields.io/badge/version-1.0.0-brightgreen.svg" alt="Version" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-^5.8.2-blue.svg" alt="TypeScript version" /></a>
+  <a href="https://github.com/egoist/tsup"><img src="https://img.shields.io/badge/Tsup-^8.4.0-yellow.svg" alt="Tsup version" /></a>
 </div>
 
 <p align="center">
@@ -38,11 +32,15 @@ The most relevant settings are:
   "entry": ["src/index.ts"],
   "external": [],
   "outDir": "dist",
-  "format": ['esm', 'cjs'],
+  "format": ["esm", "cjs"]
 }
 ```
 
-for more information see the [Tsup documentation](https://github.com/egoist/tsup).
+For more information see the [Tsup documentation](https://github.com/egoist/tsup).
+
+> [!IMPORTANT]
+> We recommend to use the `defineConfig` function to extend the configuration and at least provide
+> or review the `entry` and `external` options to avoid conflicts.
 
 ### Example
 

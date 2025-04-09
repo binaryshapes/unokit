@@ -3,18 +3,10 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/binaryshapes/unokit" target="_blank">
-      <img src="https://shields.io/badge/version-1.0.0-brightgreen.svg" alt="Version" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="https://img.shields.io/badge/TypeScript-^5.8.2-blue.svg" alt="TypeScript version" />
-    </a>
-    <a href="https://github.com/binaryshapes/unokit" target="_blank">
-      <img src="https://shields.io/badge/NestJs-11.0.13-ea2845?logo=nestjs&logoColor=white" alt="NestJS" />
-    </a>
-    <a href="https://github.com/binaryshapes/unokit" target="_blank">
-      <img src="https://shields.io/badge/Next.js-15.2.5-282828?logo=nextdotjs&logoColor=white" alt="Next.js" />
-    </a>
+    <a href="https://github.com/binaryshapes/unokit"><img src="https://shields.io/badge/version-1.0.0-brightgreen.svg" alt="Version" /></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-^5.8.2-blue.svg" alt="TypeScript version" /></a>
+    <a href="https://github.com/binaryshapes/unokit"><img src="https://shields.io/badge/NestJs-11.0.13-ea2845?logo=nestjs&logoColor=white" alt="NestJS" /></a>
+    <a href="https://github.com/binaryshapes/unokit"><img src="https://shields.io/badge/Next.js-15.2.5-282828?logo=nextdotjs&logoColor=white" alt="Next.js" /></a>
 </p>
 
 <p align="center">
