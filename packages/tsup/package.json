@@ -1,0 +1,32 @@
+{
+  "name": "@unokit/tsup",
+  "version": "1.0.0",
+  "description": "TypeScript compiler and builder for UnoKit templates",
+  "author": "Carlos Cosming",
+  "license": "MIT",
+  "keywords": [
+    "tsup",
+    "typescript",
+    "compiler",
+    "builder"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binaryshapes/unokit",
+    "directory": "packages/tsup"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "moonx build -s",
+    "format": "moonx format",
+    "format-fix": "moonx format-fix",
+    "lint": "moonx lint",
+    "lint-fix": "moonx lint-fix"
+  },
+  "peerDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}
