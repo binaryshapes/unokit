@@ -1,0 +1,23 @@
+id: '@unokit/typescript'
+language: typescript
+type: configuration
+
+project:
+  name: UnoKit TypeScript Configuration
+  description: |
+    Miscellaneous TypeScript configurations for different kind of projects like NestJS,
+    NextJS, CLIs, and more.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/unokit
+      directory: packages/typescript
+
+# This package is only json configuration, so we don't need to run any tasks.
+workspace:
+  inheritedTasks:
+    include: []

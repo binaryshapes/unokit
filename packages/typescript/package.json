@@ -1,15 +1,16 @@
 {
-  "name": "@unokit/tsconfig",
+  "name": "@unokit/typescript",
   "version": "1.0.0",
   "description": "Typescript configurations for UnoKit",
-  "author": "Carlos Cosming <carlos@binaryshapes.dev>",
+  "author": "Carlos Cosming",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/binaryshapes/unokit.git",
-    "directory": "packages/tsconfig"
+    "directory": "packages/typescript"
   },
   "keywords": [
+    "typescript",
     "tsconfig",
     "unokit"
   ],
@@ -19,5 +20,5 @@
   "exports": {
     "./*.json": "./*.json"
   },
-  "packageManager": "pnpm@10.7.0"
+  "packageManager": "pnpm@9.15.9"
 }
