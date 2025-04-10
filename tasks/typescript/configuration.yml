@@ -29,8 +29,6 @@ tasks:
       - '@group(dist)'
     inputs:
       - '@group(dist)'
-    options:
-      runDepsInParallel: false
 
   build:
     extends: 'tsup/build'
@@ -40,6 +38,8 @@ tasks:
       - 'clean'
     options:
       internal: false
+      mergeDeps: append
+      runDepsInParallel: false
 
   lint:
     extends: 'eslint/check'
