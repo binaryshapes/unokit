@@ -5,7 +5,10 @@
     ],
     "./.moon/cache/schemas/tasks.json": [
       ".moon/tasks.yml",
-      ".moon/tasks/**/*.yml"
+      ".moon/tasks/**/*.yml",
+
+      // Custom repository tasks.
+      "tasks/**/*.yml"
     ],
     "./.moon/cache/schemas/template.json": [
       "**/template.yml"
