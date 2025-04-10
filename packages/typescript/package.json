@@ -19,6 +19,5 @@
   ],
   "exports": {
     "./*.json": "./*.json"
-  },
-  "packageManager": "pnpm@9.15.9"
+  }
 }
