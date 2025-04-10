@@ -2,5 +2,6 @@ node:
   # All node and tools versions are managed by prototools.
   packageManager: 'pnpm'
   syncPackageManagerField: true
+  addEnginesConstraint: true
   syncProjectWorkspaceDependencies: true
   inferTasksFromScripts: false
