@@ -1,0 +1,27 @@
+id: '@unokit/prettier'
+language: typescript
+type: configuration
+
+dependsOn:
+  - '@unokit/tsup'
+
+project:
+  name: UnoKit Prettier Configuration
+  owner: binaryshapes
+  description: |
+    Prettier configurations for TypeScript with some useful third-party optional
+    plugins already configured.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/unokit
+      directory: packages/prettier
+
+tasks:
+  build:
+    deps:
+      - '@unokit/tsup:build'

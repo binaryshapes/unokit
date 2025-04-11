@@ -1,0 +1,51 @@
+{
+  "name": "@unokit/prettier",
+  "version": "1.0.0",
+  "description": "Unokit prettier configuration",
+  "author": "Carlos Cosming",
+  "license": "MIT",
+  "keywords": [
+    "prettier",
+    "format",
+    "code",
+    "style"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binaryshapes/unokit.git",
+    "directory": "packages/prettier"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "moonx build -s",
+    "format": "moonx format",
+    "format-fix": "moonx format-fix",
+    "lint": "moonx lint",
+    "lint-fix": "moonx lint-fix"
+  },
+  "dependencies": {
+    "deepmerge-ts": "^7.1.5"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@unokit/tsup": "workspace:*",
+    "prettier": "^3.5.3",
+    "prettier-plugin-multiline-arrays": "^4.0.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-multiline-arrays": "^4.0.3"
+  },
+  "peerDependenciesMeta": {
+    "@trivago/prettier-plugin-sort-imports": {
+      "optional": true
+    },
+    "prettier-plugin-multiline-arrays": {
+      "optional": true
+    }
+  }
+}
