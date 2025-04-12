@@ -1,0 +1,22 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
+    "target": "es2022",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "dist"
+  ],
+  "references": []
+}

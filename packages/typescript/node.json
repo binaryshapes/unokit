@@ -1,7 +1,11 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
-    "types": ["node"]
+    "types": ["node"],
+    "lib": ["es2022"],
+    "customConditions": ["development"],
+    "moduleResolution": "bundler",
+    "module": "esnext"
   },
   "files": [],
   "include": []
