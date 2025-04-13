@@ -1,6 +1,12 @@
 {
   "version": "0.2",
-  "ignorePaths": ["node_modules", "dist", "coverage"],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "pnpm-*.yaml",
+    "packages/**/eslint/results.html"
+  ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [],
@@ -11,7 +17,11 @@
     "commitlint",
     "tiged",
     "swcrc",
-    "trivago"
+    "trivago",
+    "tsup",
+    "rimraf",
+    "moonx",
+    "binaryshapes"
   ],
   "import": []
 }
