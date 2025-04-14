@@ -1,0 +1,6 @@
+{
+  "extends": "./node.lib.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
+  }
+}

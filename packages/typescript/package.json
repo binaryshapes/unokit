@@ -19,5 +19,13 @@
   ],
   "exports": {
     "./*.json": "./*.json"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0"
+  },
+  "peerDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0"
   }
 }
