@@ -26,7 +26,6 @@
     "lint-fix": "moonx lint-fix"
   },
   "peerDependencies": {
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "tsup": "^8.4.0"
   }
 }
