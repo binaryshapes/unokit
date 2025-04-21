@@ -1,2 +1,9 @@
+autoInstallPeers: true
+strictPeerDependencies: true
+onlyBuiltDependencies:
+  - '@swc/core'
+  - 'esbuild'
+  - 'nx'
+
 packages:
   - packages/*

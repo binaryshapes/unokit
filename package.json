@@ -4,19 +4,27 @@
   "description": "Boilerplate presets and templates to simplify project setup and source code management.",
   "license": "MIT",
   "author": "Carlos Cosming <carlos@binaryshapes.com>",
-  "keywords": [],
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "clean": "rimraf node_modules packages/*/node_modules pnpm-lock.yaml",
     "commitlint": "commitlint --edit",
     "commit": "commit",
     "prepare": "husky"
   },
-  "packageManager": "pnpm@10.7.0",
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/prompt-cli": "^19.8.0",
     "@commitlint/types": "^19.8.0",
-    "husky": "^9.1.7"
-  }
+    "@unokit/eslint": "workspace:*",
+    "@unokit/prettier": "workspace:*",
+    "@unokit/typescript": "workspace:*",
+    "husky": "^9.1.7",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.8.3"
+  },
+  "engines": {
+    "node": "22.14.0"
+  },
+  "packageManager": "pnpm@9.15.9"
 }
