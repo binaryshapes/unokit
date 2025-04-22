@@ -15,9 +15,14 @@
     "url": "https://github.com/binaryshapes/unokit.git",
     "directory": "packages/prettier"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "build": "moonx build -s",
     "format": "moonx format",
@@ -26,17 +31,16 @@
     "lint-fix": "moonx lint-fix"
   },
   "dependencies": {
-    "deepmerge-ts": "^7.1.5"
+    "deepmerge-ts": "^7.1.5",
+    "prettier": "^3.5.3"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@unokit/tsup": "workspace:*",
-    "prettier": "^3.5.3",
-    "prettier-plugin-multiline-arrays": "^4.0.3",
-    "typescript": "^5.8.2"
+    "prettier-plugin-multiline-arrays": "^4.0.3"
   },
   "peerDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "prettier": "^3.5.3",
     "prettier-plugin-multiline-arrays": "^4.0.3"
   },
