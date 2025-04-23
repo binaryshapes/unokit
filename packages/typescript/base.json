@@ -6,9 +6,9 @@
     "baseUrl": "${configDir}",
     "outDir": "${configDir}/dist",
     "lib": ["ESNext"],
-    "target": "ESNext",
-    "module": "ES2022",
-    "moduleResolution": "bundler",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -27,5 +27,17 @@
     "noUnusedLocals": true,
     "strict": true,
     "customConditions": ["development"]
+  },
+  // HACK: This is a workaround for with ts-node and Jest < 30 when moduleResolution is Bundler, NodeNext or Node16.
+  // This issue was fixed v30.0.0-alpha.5:
+  // Ref: https://github.com/jestjs/jest/releases/tag/v30.0.0-alpha.5
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      // To avoid error for in node10.
+      "customConditions": null,
+      "module": "ESNext",
+      "moduleResolution": "Node10"
+    }
   }
 }
