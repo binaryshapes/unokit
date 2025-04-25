@@ -19,7 +19,7 @@
       "path": "./packages/eslint"
     },
     {
-      "path": "./packages/tools"
+      "path": "./packages/builtins"
     }
   ],
   "include": [
