@@ -10,3 +10,4 @@
 fileGroups:
   src:
     - 'src/**/*.{ts,tsx}'
+    - 'package.json'
