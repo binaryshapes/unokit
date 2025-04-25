@@ -15,9 +15,14 @@
     "url": "https://github.com/binaryshapes/unokit",
     "directory": "packages/tsup"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "build": "moonx build -s",
     "format": "moonx format",
