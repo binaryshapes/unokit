@@ -1,0 +1,25 @@
+id: '@unokit/eslint'
+language: typescript
+type: configuration
+
+dependsOn:
+  - '@unokit/tsup'
+
+project:
+  name: Unokit ESLint
+  owner: binaryshapes
+  description: A collection of ESLint configurations for general purpose.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/unokit
+      directory: packages/eslint
+
+tasks:
+  build:
+    deps:
+      - '@unokit/tsup:build'

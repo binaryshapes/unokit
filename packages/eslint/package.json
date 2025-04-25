@@ -1,0 +1,52 @@
+{
+  "name": "@unokit/eslint",
+  "version": "1.0.0",
+  "description": "A collection of ESLint configurations for general purpose",
+  "author": "Carlos Cosming",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binaryshapes/unokit.git",
+    "directory": "packages/eslint"
+  },
+  "keywords": [
+    "eslint",
+    "linter",
+    "typescript"
+  ],
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "moonx build -s",
+    "format": "moonx format",
+    "format-fix": "moonx format-fix",
+    "lint": "moonx lint",
+    "lint-fix": "moonx lint-fix"
+  },
+  "devDependencies": {
+    "@nx/eslint-plugin": "^20.7.1",
+    "@types/node": "^22.13.17",
+    "@unokit/tsup": "workspace:*",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "jsonc-eslint-parser": "^2.4.0",
+    "tslib": "^2.8.1",
+    "tsup": "^8.4.0",
+    "typescript-eslint": "^8.29.0"
+  },
+  "peerDependencies": {
+    "@nx/eslint-plugin": "^20.7.1",
+    "@types/node": "^22.13.17",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "jsonc-eslint-parser": "^2.4.0",
+    "tslib": "^2.8.1",
+    "typescript-eslint": "^8.29.0"
+  }
+}
