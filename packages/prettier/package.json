@@ -37,7 +37,8 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@unokit/tsup": "workspace:*",
-    "prettier-plugin-multiline-arrays": "^4.0.3"
+    "prettier-plugin-multiline-arrays": "^4.0.3",
+    "tsup": "^8.4.0"
   },
   "peerDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
