@@ -1,0 +1,25 @@
+id: '@unokit/jest'
+language: typescript
+type: configuration
+
+dependsOn:
+  - '@unokit/tsup'
+
+project:
+  name: Unokit Jest
+  owner: binaryshapes
+  description: A collection of Jest configurations for testing TypeScript projects.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/unokit
+      directory: packages/jest
+
+tasks:
+  build:
+    deps:
+      - '@unokit/tsup:build'
