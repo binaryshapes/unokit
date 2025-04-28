@@ -16,9 +16,7 @@
     "directory": "packages/prettier"
   },
   "files": [
-    "dist",
-    "package.json",
-    "LICENSE"
+    "dist"
   ],
   "exports": {
     ".": {
