@@ -18,6 +18,7 @@ import { type Config } from 'prettier';
  * https://github.com/trivago/prettier-plugin-sort-imports
  */
 const sortImportsPluginConfig: Config = {
+  // TODO: migrate to https://github.com/ianvs/prettier-plugin-sort-imports
   plugins: ['@trivago/prettier-plugin-sort-imports'],
   // By default, the import order is empty.
   importOrder: [],
