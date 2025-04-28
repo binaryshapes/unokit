@@ -9,7 +9,11 @@
   ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": [],
+  "words": [
+    "nodemon",
+    "tasker",
+    "Taskers"
+  ],
   "ignoreWords": [
     "unokit",
     "Moonrepo",
