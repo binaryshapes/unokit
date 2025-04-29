@@ -1,0 +1,18 @@
+id: '@unokit/core'
+language: typescript
+type: library
+
+project:
+  name: UnoKit Core package
+  description: |
+    Contains the core classes, types and utilities for the UnoKit project. This package is not
+    intended to be used directly unless you are developing custom templates, tools or clients.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/unokit
+      directory: packages/core

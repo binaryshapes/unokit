@@ -1,0 +1,51 @@
+{
+  "name": "@unokit/core",
+  "version": "1.0.0",
+  "description": "Unokit core package",
+  "author": "Carlos Cosming <carlos@binaryshapes.dev>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "test:config": "jest --verbose --showConfig",
+    "test": "jest --verbose",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\""
+  },
+  "dependencies": {
+    "@inquirer/core": "^10.1.10",
+    "@inquirer/prompts": "^7.4.0",
+    "@inquirer/testing": "^2.1.45",
+    "@inquirer/type": "^3.0.6",
+    "deepmerge-ts": "^7.1.5",
+    "handlebars": "^4.7.8",
+    "jsonschema": "^1.5.0",
+    "ora": "^8.2.0",
+    "picocolors": "^1.1.1",
+    "reflect-metadata": "^0.2.2",
+    "ts-json-schema-generator": "^2.4.0",
+    "yaml": "^2.7.1"
+  },
+  "devDependencies": {
+    "@nx/jest": "^20.7.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.17",
+    "@unokit/jest": "workspace:*",
+    "@unokit/tsup": "workspace:*",
+    "@unokit/typescript": "workspace:*",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3"
+  }
+}
