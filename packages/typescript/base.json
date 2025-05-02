@@ -39,5 +39,16 @@
       "module": "ESNext",
       "moduleResolution": "Node10"
     }
-  }
+  },
+  // Typical preset for all packages.
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  // Typical exclude for all packages.
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage"
+  ]
 }
