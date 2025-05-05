@@ -9,7 +9,7 @@
 import nx from '@nx/eslint-plugin';
 import { type ConfigArray } from 'typescript-eslint';
 
-import { consistentTypes, jsonParser } from './presets';
+import { consistentTypes, jsonParser, tsJsDoc } from './presets';
 
 /**
  * Base ESLint configuration based on the recommended configuration, Nx rules and Unokit's presets.
@@ -24,9 +24,10 @@ const config: ConfigArray = [
   // Ref: https://github.com/nrwl/nx/blob/master/packages/eslint-plugin/src/flat-configs/javascript.ts
   ...nx.configs['flat/javascript'],
 
-  // Unokit's presets
+  // Unokit's presets.
   ...jsonParser,
   ...consistentTypes,
+  ...tsJsDoc,
   {
     ignores: ['**/dist'],
   },
