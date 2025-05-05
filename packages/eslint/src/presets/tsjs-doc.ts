@@ -1,11 +1,11 @@
 import jsdoc from 'eslint-plugin-jsdoc';
 import tsdoc from 'eslint-plugin-tsdoc';
-import { type ConfigArray, config } from 'typescript-eslint';
+import eslint from 'eslint/config';
 
 /**
  * ESLint configuration for TypeScript and JavaScript documentation.
  */
-const tsJsDoc: ConfigArray = config({
+export default eslint.defineConfig({
   plugins: {
     tsdoc,
     jsdoc,
@@ -56,5 +56,3 @@ const tsJsDoc: ConfigArray = config({
     jsdoc.configs['flat/recommended-typescript'],
   ],
 });
-
-export default tsJsDoc;

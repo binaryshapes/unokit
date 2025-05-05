@@ -6,12 +6,12 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import { type ConfigArray, config } from 'typescript-eslint';
+import eslint from 'eslint/config';
 
 /**
  * Forcing consistent type imports and exports.
  */
-const consistentTypes: ConfigArray = config({
+export default eslint.defineConfig({
   files: [
     '**/*.ts',
     '**/*.tsx',
@@ -32,5 +32,3 @@ const consistentTypes: ConfigArray = config({
     '@typescript-eslint/consistent-type-exports': 'error',
   },
 });
-
-export default consistentTypes;
