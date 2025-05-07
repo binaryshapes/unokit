@@ -10,9 +10,7 @@ import type { Options } from 'tsup';
 
 /**
  * Tsup configuration for UnoKit used to build the project using the Tsup library and supports
- * both ESM and CJS formats.zw
- *
- * @note
+ * both ESM and CJS formats.
  * It is possible to extend this configuration by using the tsup `defineConfig` function.
  * Is recommended to provide the `entry` and `external` options to avoid conflicts.
  *
