@@ -15,6 +15,9 @@
     "url": "https://github.com/binaryshapes/unokit",
     "directory": "packages/tsup"
   },
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "development": "./src/index.ts",
