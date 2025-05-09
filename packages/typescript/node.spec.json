@@ -5,13 +5,8 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "jest.config.ts",
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
-  ],
-  "exclude": [
-    "dist"
+    // XXX: This assumes that the test is running using Jest.
+    "${configDir}/jest.config.ts"
   ],
   "references": [
     {

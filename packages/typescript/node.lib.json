@@ -10,12 +10,11 @@
     "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
   },
   "include": [
-    "src/**/*.ts"
+    // XXX: This assumes that the test is running using Tsup.
+    "${configDir}/tsup.config.ts"
   ],
   "exclude": [
-    "jest.config.ts",
-    "src/**/*.spec.ts",
-    "dist"
+    "${configDir}/tests/**/*.ts"
   ],
   "references": []
 }
