@@ -17,6 +17,10 @@ export default eslint.defineConfig({
   ignores: [
     '**/*.mdx/**.ts',
     '**/*.mdx/**.tsx',
+    '**/*.test.ts',
+    '**/*.test.tsx',
+    '**/*.spec.ts',
+    '**/*.spec.tsx',
   ],
   languageOptions: {
     parserOptions: {
