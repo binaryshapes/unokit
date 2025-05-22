@@ -52,7 +52,7 @@ type VitestOptions = {
   /**
    * The projects to run the tests.
    *
-   * @defaultValue undefined
+   * @defaultValue `{ mode: 'add', config: [] }`
    */
   projects?: { mode: 'add' | 'replace'; config: TestProjectConfiguration[] };
 };
@@ -80,7 +80,6 @@ const defaultConfig: VitestOptions = {
 const defineVitestConfig = (config: VitestOptions = defaultConfig) =>
   defineConfig({
     test: {
-      // This need to set "types": ["vitest/globals"] in tsconfig.json.
       globals: config.globals,
       watch: config.watch,
       ui: config.ui,
