@@ -68,7 +68,7 @@ const defaultConfig: VitestOptions = {
   dir: './tests',
   thresholds: 90,
   disableConsoleIntercept: true,
-  projects: undefined,
+  projects: { mode: 'add', config: [] },
 };
 
 /**
