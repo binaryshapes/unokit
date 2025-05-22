@@ -1,1 +1,1 @@
-extends: '../../tasks/typescript/configuration.yml'
+extends: '../../packages/moon/tasks/typescript/configuration.yml'
