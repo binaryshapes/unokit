@@ -57,6 +57,9 @@ const baseConfig = defineConfig({
         test: {
           name: 'types',
           include: ['tests/**/*.spec-d.ts'],
+          typecheck: {
+            enabled: true,
+          },
         },
       },
     ],
