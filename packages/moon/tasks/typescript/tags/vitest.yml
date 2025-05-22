@@ -1,0 +1,34 @@
+extends:
+  - '../file-groups/tests.yml'
+  - '../internals/vitest.yml'
+
+tasks:
+  test:
+    extends: 'vitest/test'
+    options:
+      internal: false
+
+  test-watch:
+    extends: 'vitest/watch'
+    options:
+      internal: false
+
+  test-coverage:
+    extends: 'vitest/coverage'
+    options:
+      internal: false
+
+  test-types:
+    extends: 'vitest/types'
+    options:
+      internal: false
+
+  test-runtime:
+    extends: 'vitest/runtime'
+    options:
+      internal: false
+
+  test-ui:
+    extends: 'vitest/ui'
+    options:
+      internal: false

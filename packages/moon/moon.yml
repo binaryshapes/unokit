@@ -1,0 +1,22 @@
+id: '@unokit/moon'
+language: typescript
+type: configuration
+
+project:
+  name: UnoKit Moon Configuration
+  description: |
+    Miscellaneous Moon configurations for monorepos and toolchains tasks.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/unokit
+      directory: packages/moon
+
+# This package is only json configuration, so we don't need to run any tasks.
+workspace:
+  inheritedTasks:
+    include: []
