@@ -1,0 +1,17 @@
+id: '@unokit/vitest'
+language: typescript
+type: configuration
+
+project:
+  name: UnoKit Vitest Configuration
+  description: |
+    Just a base configuration for Vitest tool to run tests.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/unokit
+      directory: packages/vitest

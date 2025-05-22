@@ -1,0 +1,48 @@
+{
+  "name": "@unokit/vitest",
+  "version": "1.0.0",
+  "description": "Unokit vitest configuration",
+  "author": "Carlos Cosming",
+  "license": "MIT",
+  "keywords": [
+    "vite",
+    "vitest",
+    "testing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binaryshapes/unokit.git",
+    "directory": "packages/vitest"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "moonx build -s",
+    "format": "moonx format",
+    "format-fix": "moonx format-fix",
+    "lint": "moonx lint",
+    "lint-fix": "moonx lint-fix"
+  },
+  "devDependencies": {
+    "@unokit/tsup": "workspace:*",
+    "@vitest/coverage-v8": "^3.1.4",
+    "@vitest/ui": "^3.1.4",
+    "tslib": "^2.8.1",
+    "tsup": "^8.4.0",
+    "vitest": "^3.1.4"
+  },
+  "peerDependencies": {
+    "@vitest/coverage-v8": "^3.1.4",
+    "@vitest/ui": "^3.1.4",
+    "vitest": "^3.1.4"
+  }
+}
