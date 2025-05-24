@@ -49,6 +49,14 @@ type VitestOptions = {
    * @defaultValue 90
    */
   thresholds?: number;
+
+  /**
+   * The tsconfig file to use for typechecking.
+   *
+   * @defaultValue './tsconfig.json'
+   */
+  typecheckTsConfig?: string;
+
   /**
    * The projects to run the tests.
    *
@@ -68,6 +76,7 @@ const defaultConfig: VitestOptions = {
   dir: './tests',
   thresholds: 90,
   disableConsoleIntercept: true,
+  typecheckTsConfig: './tsconfig.json',
   projects: { mode: 'add', config: [] },
 };
 
@@ -77,8 +86,11 @@ const defaultConfig: VitestOptions = {
  * @param config - The configuration for Vitest.
  * @returns The configuration for Vitest.
  */
-const defineVitestConfig = (config: VitestOptions = defaultConfig) =>
-  defineConfig({
+const defineVitestConfig = (config: VitestOptions = defaultConfig) => {
+  // Checking given options and merge with default options.
+  config = { ...defaultConfig, ...config };
+
+  return defineConfig({
     test: {
       globals: config.globals,
       watch: config.watch,
@@ -138,7 +150,7 @@ const defineVitestConfig = (config: VitestOptions = defaultConfig) =>
                   typecheck: {
                     enabled: true,
                     only: true,
-                    tsconfig: './tsconfig.spec.json',
+                    tsconfig: config.typecheckTsConfig,
                   },
                 },
               },
@@ -147,5 +159,5 @@ const defineVitestConfig = (config: VitestOptions = defaultConfig) =>
           : config.projects?.config,
     },
   });
-
+};
 export default defineVitestConfig;
