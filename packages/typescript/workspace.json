@@ -1,0 +1,13 @@
+{
+  "extends": "./base.json",
+  // The workspace includes all possible tools used in a project.
+  "include": [
+    "${configDir}/eslint.config.ts",
+    "${configDir}/prettier.config.mjs",
+    "${configDir}/commitlint.config.ts",
+    "${configDir}/vitest.config.ts",
+    "${configDir}/vite.config.ts",
+    "${configDir}/tsup.config.ts",
+    "${configDir}/jest.config.ts"
+  ]
+}

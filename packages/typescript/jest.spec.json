@@ -4,9 +4,6 @@
     "types": ["jest", "node"],
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "${configDir}/jest.config.ts"
-  ],
   "references": [
     {
       "path": "./tsconfig.lib.json"

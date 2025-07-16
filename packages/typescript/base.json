@@ -40,10 +40,11 @@
       "moduleResolution": "Node10"
     }
   },
-  // Typical preset for all packages.
   "include": [
+    // Typical presets for all packages and apps.
     "${configDir}/src/**/*.ts",
-    "${configDir}/tests/**/*.ts"
+    "${configDir}/tests/**/*.ts",
+    "${configDir}/examples/**/*.ts"
   ],
   // Typical exclude for all packages.
   "exclude": [
