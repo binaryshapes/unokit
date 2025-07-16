@@ -1,0 +1,19 @@
+id: '@nuxo/vite'
+language: typescript
+type: configuration
+tags:
+  - vite
+
+project:
+  name: Nuxo Vite Configuration
+  owner: binaryshapes
+  description: A collection of Vite configurations to build libraries and applications.
+  maintainers:
+    - Carlos Cosming
+  metadata:
+    license: MIT
+    public: true
+    repository:
+      type: git
+      url: https://github.com/binaryshapes/nuxo
+      directory: packages/vite

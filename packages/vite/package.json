@@ -1,0 +1,47 @@
+{
+  "name": "@nuxo/vite",
+  "version": "1.0.0",
+  "description": "A base configuration for Vite tool to build libraries and applications",
+  "author": "Carlos Cosming",
+  "license": "MIT",
+  "keywords": [
+    "vite",
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binaryshapes/nuxo.git",
+    "directory": "packages/vite"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "moonx build -s",
+    "format": "moonx format",
+    "format-fix": "moonx format-fix",
+    "lint": "moonx lint",
+    "lint-fix": "moonx lint-fix",
+    "publish-local": "pnpm build && pnpm publish --registry=http://localhost:4873 --no-git-checks",
+    "unpublish-local": "npm unpublish @nuxo/vite --registry=http://localhost:4873/ --force",
+    "republish-local": "pnpm unpublish-local && pnpm publish-local"
+  },
+  "devDependencies": {
+    "@nuxo/typescript": "workspace:*",
+    "@types/node": "^24.0.14",
+    "tslib": "^2.8.1",
+    "vite": "^7.0.4",
+    "vite-plugin-node-polyfills": "^0.24.0"
+  },
+  "peerDependencies": {
+    "vite": "^7.0.4"
+  }
+}
