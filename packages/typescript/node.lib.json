@@ -1,18 +1,18 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
-    "emitDeclarationOnly": false,
+    "rootDir": "${configDir}/src",
+    "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["node"],
     "strictNullChecks": true,
     "noImplicitAny": true,
     "strictBindCallApply": true,
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "declarationMap": false
   },
-  "include": [
-    // XXX: This assumes that the test is running using Tsup.
-    "${configDir}/tsup.config.ts"
-  ],
   "exclude": [
     "${configDir}/tests/**/*.ts"
   ],

@@ -1,7 +1,7 @@
 {
-  "name": "@unokit/typescript",
+  "name": "@nuxo/typescript",
   "version": "1.0.0",
-  "description": "Typescript configurations for UnoKit",
+  "description": "Typescript configurations for Nuxo",
   "author": "Carlos Cosming",
   "license": "MIT",
   "repository": {
@@ -11,8 +11,7 @@
   },
   "keywords": [
     "typescript",
-    "tsconfig",
-    "unokit"
+    "tsconfig"
   ],
   "files": [
     "*.json"
@@ -20,10 +19,14 @@
   "exports": {
     "./*.json": "./*.json"
   },
+  "devDependencies": {
+    "vite": "^7.0.4"
+  },
   "peerDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.14.0",
     "typescript": "~5.8.3",
+    "vite": "^7.0.4",
     "vitest": "^3.1.4"
   }
 }

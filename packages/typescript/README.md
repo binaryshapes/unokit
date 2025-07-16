@@ -1,22 +1,20 @@
 <h1 align="center">
-  <b>UnoKit TypeScript</b>
+  <b>📦 @nuxo/typescript</b>
 </h1>
 
 <p align="center">
     <a href="https://github.com/binaryshapes/unokit"><img src="https://shields.io/badge/version-1.0.0-brightgreen.svg" alt="Version" /></a>
     <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-^5.8.2-blue.svg" alt="TypeScript version" /></a>
-    <a href="https://github.com/binaryshapes/unokit"><img src="https://shields.io/badge/NestJs-11.0.13-ea2845?logo=nestjs&logoColor=white" alt="NestJS" /></a>
-    <a href="https://github.com/binaryshapes/unokit"><img src="https://shields.io/badge/Next.js-15.2.5-282828?logo=nextdotjs&logoColor=white" alt="Next.js" /></a>
 </p>
 
 <p align="center">
-   Miscellaneous TypeScript configurations for different kind of projects like Node, NestJS, NextJS, and more.
+   Miscellaneous TypeScript configurations for different kind of projects like Node, Jest, Vite, Tsup, Vitest, NextJS, NestJS, and more.
 </p>
 
 ## 📦 Installation
 
 ```bash
-pnpm add @unokit/typescript
+pnpm add @nuxo/typescript
 ```
 
 ## 💻 Usage
@@ -27,7 +25,7 @@ Depending on the project type, you can extend the following configurations:
 
 ```jsonc
 {
-  "extends": "@unokit/typescript/node.json",
+  "extends": "@nuxo/typescript/node.json",
   // Rest of your configuration.
 }
 ```
@@ -38,7 +36,7 @@ For NestJS projects, you can use the `nest.app.json` for application projects or
 
 ```jsonc
 {
-  "extends": "@unokit/typescript/nest.lib.json",
+  "extends": "@nuxo/typescript/nest.lib.json",
   // Rest of your configuration.
 }
 ```
@@ -49,7 +47,7 @@ For NextJS projects, you can use the `nextjs.app.json` for application projects 
 
 ```jsonc
 {
-  "extends": "@unokit/typescript/nextjs.app.json",
+  "extends": "@nuxo/typescript/nextjs.app.json",
   // Rest of your configuration.
 }
 ```
@@ -60,13 +58,13 @@ Also, we provide a base configuration that you can extend to create your own con
 
 ```jsonc
 {
-  "extends": "@unokit/typescript/base.json",
+  "extends": "@nuxo/typescript/base.json",
   // Rest of your configuration.
 }
 ```
 
 > [!TIP]
-> UnoKit uses this base configuration for its libraries 😎
+> Nuxo uses this base configuration for its libraries 😎
 
 ## 📄 License
 
