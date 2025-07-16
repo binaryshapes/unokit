@@ -1,17 +1,15 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
+    // Neccesary to generate declaration files.
     "rootDir": "${configDir}/src",
-    "declaration": true,
     "noEmit": false,
-    "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["node"],
     "strictNullChecks": true,
     "noImplicitAny": true,
     "strictBindCallApply": true,
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
-    "declarationMap": false
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
   },
   "exclude": [
     "${configDir}/tests/**/*.ts"
