@@ -5,7 +5,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "./jest.config.ts"
+    "${configDir}/jest.config.ts"
   ],
   "references": [
     {
