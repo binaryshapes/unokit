@@ -1,11 +1,13 @@
-id: '@unokit/vitest'
+id: '@nuxo/vitest'
 language: typescript
 type: configuration
+tags:
+  - tsup
 
 project:
-  name: UnoKit Vitest Configuration
-  description: |
-    Just a base configuration for Vitest tool to run tests.
+  name: Nuxo Vitest Configuration
+  owner: binaryshapes
+  description: A base configuration for Vitest tool to run tests
   maintainers:
     - Carlos Cosming
   metadata:
@@ -13,5 +15,5 @@ project:
     public: true
     repository:
       type: git
-      url: https://github.com/binaryshapes/unokit
+      url: https://github.com/binaryshapes/nuxo
       directory: packages/vitest

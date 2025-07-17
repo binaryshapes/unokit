@@ -1,8 +1,1 @@
-import tsupConfig from '@unokit/tsup';
-import { defineConfig } from 'tsup';
-
-export default defineConfig({
-  ...tsupConfig,
-  entry: ['src/index.ts'],
-  external: ['vitest/config'],
-});
+export { default } from '@nuxo/tsup';

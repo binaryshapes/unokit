@@ -1,7 +1,7 @@
 {
-  "name": "@unokit/vitest",
+  "name": "@nuxo/vitest",
   "version": "1.0.0",
-  "description": "Unokit vitest configuration",
+  "description": "A base configuration for Vitest tool to run tests",
   "author": "Carlos Cosming",
   "license": "MIT",
   "keywords": [
@@ -11,12 +11,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/binaryshapes/unokit.git",
+    "url": "https://github.com/binaryshapes/nuxo.git",
     "directory": "packages/vitest"
   },
   "files": [
     "dist"
   ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "development": "./src/index.ts",
@@ -30,10 +33,13 @@
     "format": "moonx format",
     "format-fix": "moonx format-fix",
     "lint": "moonx lint",
-    "lint-fix": "moonx lint-fix"
+    "lint-fix": "moonx lint-fix",
+    "publish-local": "pnpm build && pnpm publish --registry=http://localhost:4873 --no-git-checks --force",
+    "unpublish-local": "npm unpublish --registry=http://localhost:4873/ --force",
+    "republish-local": "pnpm unpublish-local && pnpm publish-local"
   },
   "devDependencies": {
-    "@unokit/tsup": "workspace:*",
+    "@nuxo/tsup": "workspace:*",
     "@vitest/coverage-v8": "^3.1.4",
     "@vitest/ui": "^3.1.4",
     "tslib": "^2.8.1",

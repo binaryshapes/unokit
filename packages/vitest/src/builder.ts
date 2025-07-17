@@ -1,5 +1,5 @@
 /*
- * This file is part of the UnoKit project.
+ * This file is part of the Nuxo project.
  *
  * Copyright (c) 2025, Binary Shapes.
  *
@@ -67,7 +67,7 @@ type VitestOptions = {
 
 /**
  * The default configuration for Vitest.
- * Unokit team prefer to use this configuration.
+ * Nuxo team prefer to use this configuration.
  */
 const defaultConfig: VitestOptions = {
   globals: true,
