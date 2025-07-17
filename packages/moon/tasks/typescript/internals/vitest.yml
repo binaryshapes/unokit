@@ -16,6 +16,12 @@ tasks:
   vitest/base:
     description: 'Runs tests using Vitest'
     command: 'vitest'
+    args:
+      - '--typecheck'
+      - '--coverage'
+      - '--hideSkippedTests'
+      - '--bail'
+      - '1'
     type: test
     options:
       mergeInputs: append
@@ -64,11 +70,6 @@ tasks:
     extends: 'vitest/base'
     description: 'Runs tests using Vitest with a specific project'
     args:
-      - '--typecheck'
-      - '--coverage'
-      - '--hideSkippedTests'
-      - '--bail'
-      - '1'
       - '--project'
 
   vitest/types:
