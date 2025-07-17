@@ -1,3 +1,7 @@
 {
-  "extends": "@nuxo/typescript/tsup.lib.json"
+  "extends": "@nuxo/typescript/tsup.lib.json",
+  "include": [
+    "src/**/*.ts",
+    "tsup.config.ts"
+  ]
 }
