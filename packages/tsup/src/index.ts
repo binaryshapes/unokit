@@ -1,32 +1,18 @@
 /*
- * This file is part of the UnoKit project.
+ * This file is part of the Nuxo project.
  *
  * Copyright (c) 2025, Binary Shapes.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import type { Options } from 'tsup';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { type Options, defineConfig } from 'tsup';
 
-/**
- * Tsup configuration for UnoKit used to build the project using the Tsup library and supports
- * both ESM and CJS formats.
- * It is possible to extend this configuration by using the tsup `defineConfig` function.
- * Is recommended to provide the `entry` and `external` options to avoid conflicts.
- *
- * @example
- * ```ts
- * import config from '@unokit/tsup';
- * import { defineConfig } from 'tsup';
- *
- * export default defineConfig({
- *   ...config,
- *   entry: ['src/index.ts'],
- *   external: ['react'],
- *   // rest of the custom configuration.
- * });
- * ```
- */
+const pkg = JSON.parse(readFileSync(join(process.cwd(), 'package.json'), 'utf-8'));
+
+// Default configuration for Tsup.
 const config: Options = {
   splitting: false,
   sourcemap: false,
@@ -42,7 +28,11 @@ const config: Options = {
   minifySyntax: true,
   minifyWhitespace: true,
   silent: true,
-  external: [],
+  // Dependencies and devDependencies as external dependencies.
+  external: [
+    ...Object.keys(pkg.dependencies || {}),
+    ...Object.keys(pkg.devDependencies || {}),
+  ],
   entry: ['src/index.ts'],
 
   // This avoid the TS6307 error on composite tsconfig.json.
@@ -55,4 +45,34 @@ const config: Options = {
   },
 };
 
-export default config;
+/**
+ * Configuration to build a project using the Tsup library and supports both ESM and CJS formats.
+ *
+ * It is possible to extend this configuration by using the tsup native options.
+ *
+ * Is recommended to provide the `entry` and `external` options to avoid conflicts. By default,
+ * the `entry` option is `['src/index.ts']` and the `external` option includes the dependencies
+ * and devDependencies from the `package.json` file.
+ *
+ * @param options - The options to extend the configuration.
+ * @returns The Tsup configuration.
+ *
+ * @example
+ * ```ts
+ * // With custom options.
+ * import tsupConfig from '@nuxo/tsup';
+ *
+ * export default tsupConfig({
+ *   // rest of the custom configuration.
+ * });
+ * ```
+ *
+ * @example
+ * ```ts
+ * // With default options.
+ * export { default } from '@nuxo/tsup';
+ * ```
+ */
+const tsupConfig = (options: Options) => defineConfig({ ...config, ...options });
+
+export default tsupConfig;

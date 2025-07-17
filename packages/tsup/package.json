@@ -1,7 +1,7 @@
 {
-  "name": "@unokit/tsup",
+  "name": "@nuxo/tsup",
   "version": "1.0.0",
-  "description": "TypeScript compiler and builder for UnoKit templates",
+  "description": "A base configuration for Tsup tool to build libraries and applications",
   "author": "Carlos Cosming",
   "license": "MIT",
   "keywords": [
@@ -12,12 +12,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/binaryshapes/unokit",
+    "url": "https://github.com/binaryshapes/nuxo",
     "directory": "packages/tsup"
   },
   "files": [
     "dist"
   ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "development": "./src/index.ts",
@@ -27,11 +30,21 @@
     }
   },
   "scripts": {
-    "build": "moonx build -s",
+    "build": "moonx build -s -u",
     "format": "moonx format",
     "format-fix": "moonx format-fix",
     "lint": "moonx lint",
-    "lint-fix": "moonx lint-fix"
+    "lint-fix": "moonx lint-fix",
+    "publish-local": "pnpm build && pnpm publish --registry=http://localhost:4873 --no-git-checks --force",
+    "unpublish-local": "npm unpublish --registry=http://localhost:4873/ --force",
+    "republish-local": "pnpm unpublish-local && pnpm publish-local"
+  },
+  "dependencies": {
+    "tsup": "^8.4.0"
+  },
+  "devDependencies": {
+    "@nuxo/typescript": "workspace:*",
+    "@types/node": "^24.0.14"
   },
   "peerDependencies": {
     "tsup": "^8.4.0"
