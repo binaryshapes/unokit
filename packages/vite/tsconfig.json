@@ -1,12 +1,7 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    }
-  ],
+  "extends": "@nuxo/typescript/tsup.lib.json",
   "include": [
-    "src/**/*",
-    "vite.config.ts"
+    "src/**/*.ts",
+    "tsup.config.ts"
   ]
 }

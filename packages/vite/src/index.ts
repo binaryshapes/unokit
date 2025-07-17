@@ -1,1 +1,1 @@
-export { nodeLibraryConfig } from './node-library';
+export * from './node-library';

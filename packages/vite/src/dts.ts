@@ -39,7 +39,8 @@ const dtsPlugin: Plugin = {
   name: 'vite:dts-generator',
   async closeBundle() {
     try {
-      exec(`tsc --build --force --verbose ${getTsConfigPath()}`);
+      // exec(`tsc --build --force --verbose ${getTsConfigPath()}`);
+      exec(`tsc --project ${getTsConfigPath()}`);
       console.log('✓ types generated successfully!');
     } catch (error) {
       console.error('Error generating types');

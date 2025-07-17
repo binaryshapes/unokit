@@ -2,7 +2,7 @@ id: '@nuxo/vite'
 language: typescript
 type: configuration
 tags:
-  - vite
+  - tsup
 
 project:
   name: Nuxo Vite Configuration
