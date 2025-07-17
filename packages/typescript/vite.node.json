@@ -1,0 +1,7 @@
+{
+  "extends": "./node.lib.json",
+  "compilerOptions": {
+    "rootDir": "${configDir}/src",
+    "noEmit": false
+  }
+}

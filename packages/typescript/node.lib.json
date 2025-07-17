@@ -1,9 +1,7 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
-    // Neccesary to generate declaration files.
-    "rootDir": "${configDir}/src",
-    "noEmit": false,
+    "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
     "types": ["node"],
     "strictNullChecks": true,
@@ -13,7 +11,8 @@
     "declarationMap": false
   },
   "exclude": [
-    "${configDir}/tests/**/*.ts"
+    "${configDir}/tests/**/*.ts",
+    "${configDir}/examples/**/*.ts"
   ],
   "references": []
 }

@@ -19,7 +19,13 @@
   "exports": {
     "./*.json": "./*.json"
   },
+  "scripts": {
+    "publish-local": "pnpm publish --registry=http://localhost:4873 --no-git-checks",
+    "unpublish-local": "npm unpublish --registry=http://localhost:4873/ --force",
+    "republish-local": "pnpm unpublish-local && pnpm publish-local"
+  },
   "devDependencies": {
+    "@types/node": "^22.14.0",
     "vite": "^7.0.4"
   },
   "peerDependencies": {

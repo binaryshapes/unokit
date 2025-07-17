@@ -26,7 +26,10 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "strict": true,
-    "customConditions": ["development"]
+    "customConditions": ["development"],
+
+    // Personal taste.
+    "resolveJsonModule": true
   },
   // HACK: This is a workaround for with ts-node and Jest < 30 when moduleResolution is Bundler, NodeNext or Node16.
   // This issue was fixed v30.0.0-alpha.5:
