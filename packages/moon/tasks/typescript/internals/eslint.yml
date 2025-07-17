@@ -12,8 +12,10 @@ tasks:
     description: 'Checks code quality using ESLint'
     command: 'eslint'
     args:
+      # Only src/**/*.{ts,tsx} or *.config.{mjs,ts,js} files.
       - '@globs(src)'
-      - '@globs(tests)'
+      # All tests/**/*.{ts,tsx} files.
+      - '@group(tests)'
     type: run
     options:
       internal: true
