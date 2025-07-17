@@ -1,5 +1,5 @@
-import { exec } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { exec } from 'child_process';
+import { existsSync } from 'fs';
 import { type Plugin } from 'vite';
 
 /**
@@ -29,9 +29,9 @@ function getTsConfigPath(): string {
 }
 
 /**
- * A plugin to generate types for the library using tsc.
+ * A plugin to generate types for a library using tsc.
  *
- * @returns A plugin to generate types for the library.
+ * @returns A Vite plugin to generate types for a library.
  *
  * @public
  */

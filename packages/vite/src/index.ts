@@ -1,2 +1,1 @@
-export { default as libraryBuildConfig } from './library';
-export { dtsPlugin } from './plugins';
+export { nodeLibraryConfig } from './node-library';
