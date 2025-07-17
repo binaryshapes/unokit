@@ -8,11 +8,6 @@
 #
 
 fileGroups:
-  # Test source code files.
-  tests:
-    - 'jest.config.ts'
-    - 'tsconfig.spec.json'
-
   # Coverage output files.
   coverage:
     - 'coverage/**/*'

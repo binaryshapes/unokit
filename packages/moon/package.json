@@ -24,7 +24,7 @@
     }
   },
   "scripts": {
-    "publish-local": "pnpm publish --registry=http://localhost:4873 --no-git-checks",
+    "publish-local": "pnpm publish --registry=http://localhost:4873 --no-git-checks --force",
     "unpublish-local": "npm unpublish --registry=http://localhost:4873/ --force",
     "republish-local": "pnpm unpublish-local && pnpm publish-local"
   }

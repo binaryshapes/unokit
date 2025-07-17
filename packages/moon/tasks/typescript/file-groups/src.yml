@@ -10,4 +10,5 @@
 fileGroups:
   src:
     - 'src/**/*.{ts,tsx}'
+    - '*.config.{mjs,ts,js}'
     - 'package.json'

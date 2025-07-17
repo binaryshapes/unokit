@@ -13,7 +13,7 @@ tasks:
     command: 'eslint'
     args:
       - '@globs(src)'
-      - '@group(tests)'
+      - '@globs(tests)'
     type: run
     options:
       internal: true
