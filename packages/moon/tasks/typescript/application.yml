@@ -1,5 +1,5 @@
 #
-# This file is part of the UnoKit project.
+# This file is part of the Nuxo project.
 #
 # Copyright (c) 2025, Binary Shapes.
 #
@@ -8,7 +8,6 @@
 #
 
 extends:
-  # - './file-groups/tests.yml'
   - './internals/node.yml'
   - './library.yml'
 

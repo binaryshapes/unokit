@@ -8,14 +8,14 @@
 #
 
 tasks:
-  tsup/build:
-    description: 'Builds the project using tsup'
-    command: 'tsup'
+  vite/build:
+    description: 'Builds the project using vite'
+    command: 'vite build'
     type: build
     options:
       internal: true
     inputs:
       - '@group(src)'
-      - 'tsup.config.ts'
+      - 'vite.config.ts'
     outputs:
       - '@group(dist)'

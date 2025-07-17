@@ -8,21 +8,17 @@
 #
 
 extends:
-  - '../file-groups/tests.yml'
-  - '../internals/jest.yml'
+  - '../file-groups/src.yml'
+  - '../internals/vite.yml'
 
 tasks:
-  test:
-    extends: 'jest/test'
+  build:
+    extends: 'vite/build'
+    deps:
+      - 'lint'
+      - 'format'
+      - 'clean'
     options:
       internal: false
-
-  test-watch:
-    extends: 'jest/watch'
-    options:
-      internal: false
-
-  test-coverage:
-    extends: 'jest/coverage'
-    options:
-      internal: false
+      mergeDeps: append
+      runDepsInParallel: false

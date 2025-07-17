@@ -1,19 +1,19 @@
 {
-  "name": "@unokit/moon",
+  "name": "@nuxo/moon",
   "version": "1.0.0",
-  "description": "Moon configurations for UnoKit",
+  "description": "A base configuration for Moonrepo tool with common tasks and workspaces",
   "author": "Carlos Cosming",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/binaryshapes/unokit.git",
+    "url": "https://github.com/binaryshapes/nuxo.git",
     "directory": "packages/moon"
   },
   "keywords": [
     "moonrepo",
-    "monorepo",
+    "workspace",
     "toolchain",
-    "unokit"
+    "tasks"
   ],
   "files": [
     "tasks"
@@ -22,5 +22,10 @@
     ".": {
       "tasks": "./tasks/*.yml"
     }
+  },
+  "scripts": {
+    "publish-local": "pnpm publish --registry=http://localhost:4873 --no-git-checks",
+    "unpublish-local": "npm unpublish --registry=http://localhost:4873/ --force",
+    "republish-local": "pnpm unpublish-local && pnpm publish-local"
   }
 }

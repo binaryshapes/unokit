@@ -1,5 +1,5 @@
 #
-# This file is part of the UnoKit project.
+# This file is part of the Nuxo project.
 #
 # Copyright (c) 2025, Binary Shapes.
 #
@@ -60,8 +60,21 @@ tasks:
     description: 'Runs tests using Vitest with UI'
     args:
       - '--ui'
+      - '--watch'
     options:
       runInCI: false
+
+  vitest/project:
+    # A project can have a different kind of configuration so we activate typecheck and coverage.
+    extends: 'vitest/base'
+    description: 'Runs tests using Vitest with a specific project'
+    args:
+      - '--typecheck'
+      - '--coverage'
+      - '--hideSkippedTests'
+      - '--bail'
+      - '1'
+      - '--project'
 
   vitest/types:
     # Types does not have coverage support.
@@ -70,11 +83,3 @@ tasks:
     args:
       - '--project'
       - 'types'
-
-  vitest/runtime:
-    # Runtime does have coverage support.
-    extends: 'vitest/coverage'
-    description: 'Runs tests using Vitest with runtime'
-    args:
-      - '--project'
-      - 'runtime'

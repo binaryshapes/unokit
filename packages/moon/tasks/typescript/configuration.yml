@@ -1,5 +1,5 @@
 #
-# This file is part of the UnoKit project.
+# This file is part of the Nuxo project.
 #
 # Copyright (c) 2025, Binary Shapes.
 #
@@ -16,7 +16,6 @@ extends:
   - './internals/rimraf.yml'
   - './internals/eslint.yml'
   - './internals/prettier.yml'
-  - './internals/tsup.yml'
 
 fileGroups:
   tests: []
@@ -29,17 +28,6 @@ tasks:
       - '@group(dist)'
     inputs:
       - '@group(dist)'
-
-  build:
-    extends: 'tsup/build'
-    deps:
-      - 'lint'
-      - 'format'
-      - 'clean'
-    options:
-      internal: false
-      mergeDeps: append
-      runDepsInParallel: false
 
   lint:
     extends: 'eslint/check'

@@ -1,11 +1,11 @@
-id: '@unokit/moon'
-language: typescript
+id: '@nuxo/moon'
+language: unknown # This package is only yaml configuration.
 type: configuration
 
 project:
-  name: UnoKit Moon Configuration
-  description: |
-    Miscellaneous Moon configurations for monorepos and toolchains tasks.
+  name: Nuxo Moon Configuration
+  owner: binaryshapes
+  description: A base configuration for Moonrepo tool with common tasks and workspaces
   maintainers:
     - Carlos Cosming
   metadata:
@@ -13,10 +13,10 @@ project:
     public: true
     repository:
       type: git
-      url: https://github.com/binaryshapes/unokit
+      url: https://github.com/binaryshapes/nuxo
       directory: packages/moon
 
-# This package is only json configuration, so we don't need to run any tasks.
+# This package is only yaml configuration, so we don't need to run any tasks.
 workspace:
   inheritedTasks:
     include: []
