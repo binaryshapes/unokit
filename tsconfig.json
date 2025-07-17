@@ -4,7 +4,13 @@
   "files": [],
   "references": [
     {
+      "path": "./packages/builtins"
+    },
+    {
       "path": "./packages/core"
+    },
+    {
+      "path": "./packages/eslint"
     },
     {
       "path": "./packages/jest"
@@ -16,15 +22,10 @@
       "path": "./packages/tsup"
     },
     {
-      "path": "./packages/eslint"
+      "path": "./packages/vite"
     },
     {
-      "path": "./packages/builtins"
+      "path": "./packages/vitest"
     }
-  ],
-  "include": [
-    "eslint.config.ts",
-    "prettier.config.mjs",
-    "commitlint.config.ts"
   ]
 }
