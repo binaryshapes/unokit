@@ -62,23 +62,22 @@ type VitestOptions = {
    *
    * @defaultValue `{ mode: 'add', config: [] }`
    */
-  projects?: { mode: 'add' | 'replace'; config: TestProjectConfiguration[] };
+  projects?: ((tsconfig: string) => TestProjectConfiguration)[];
 };
 
 /**
  * The default configuration for Vitest.
  * Nuxo team prefer to use this configuration.
  */
-const defaultConfig: VitestOptions = {
+const defaultConfig = {
   globals: true,
   watch: false,
   ui: false,
   dir: './tests',
   thresholds: 90,
   disableConsoleIntercept: true,
-  typecheckTsConfig: './tsconfig.json',
-  projects: { mode: 'add', config: [] },
-};
+  typecheckTsConfig: './tsconfig.spec.json',
+} satisfies VitestOptions;
 
 /**
  * Base configuration for Vitest.
@@ -134,29 +133,21 @@ const defineVitestConfig = (config: VitestOptions = defaultConfig) => {
           lines: config.thresholds,
         },
       },
-      workspace:
-        config.projects?.mode === 'add'
-          ? [
-              {
-                test: {
-                  name: 'runtime',
-                  include: ['tests/**/*.spec.ts'],
-                },
-              },
-              {
-                test: {
-                  name: 'types',
-                  include: ['tests/**/*.spec-d.ts'],
-                  typecheck: {
-                    enabled: true,
-                    only: true,
-                    tsconfig: config.typecheckTsConfig,
-                  },
-                },
-              },
-              ...(config.projects?.config ?? []),
-            ]
-          : config.projects?.config,
+      projects: config.projects?.map((p) =>
+        p(config.typecheckTsConfig ?? defaultConfig.typecheckTsConfig),
+      ) ?? [
+        {
+          test: {
+            include: ['tests/**/*.spec.ts'],
+            typecheck: {
+              enabled: true,
+              include: ['tests/**/*.spec.ts'],
+              checker: 'tsc',
+              tsconfig: './tsconfig.spec.json',
+            },
+          },
+        },
+      ],
     },
   });
 };

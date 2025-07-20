@@ -31,19 +31,22 @@ const DEFAULT_PROJECT_OPTIONS: ProjectOptions = {
  * @returns A project configuration object.
  */
 function project(name: string, options: ProjectOptions = DEFAULT_PROJECT_OPTIONS) {
-  const { typecheck } = options;
-  return {
-    test: {
-      name,
-      include: [`tests/${name}.spec.ts`],
-      typecheck: typecheck
-        ? {
-            enabled: true,
-            include: [`tests/${name}.spec.ts`],
-            checker: 'tsc',
-          }
-        : undefined,
-    },
+  return (tsconfig: string) => {
+    const { typecheck } = options;
+    return {
+      test: {
+        name,
+        include: [`tests/${name}.spec.ts`],
+        typecheck: typecheck
+          ? {
+              enabled: true,
+              include: [`tests/${name}.spec.ts`],
+              checker: 'tsc',
+              tsconfig,
+            }
+          : undefined,
+      },
+    };
   };
 }
 
